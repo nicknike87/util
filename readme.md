@@ -6,7 +6,7 @@
 5. остальные параметры – имена входных файлов, не менее одного5
 
 Примеры запуска из командной строки для Windows:  
-java -jar util.jar -s -a -p sample- in1.txt in2.txt
+java -jar util.jar -s -a -p sample- in1.txt in2.txt  
 java -jar util.jar -f -o /some/path in1.txt in2.txt
 
 Особенности реализации:  
