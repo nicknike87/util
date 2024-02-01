@@ -36,10 +36,10 @@ public class FileStatFloat implements FileStat {
             } else if (Solution.FullStatistics) {
                 System.out.println("\nFullStatistics on Float:");
                 System.out.printf("Number of elements is %d\n", numberOfElements);
-                System.out.printf("maxValue is %.2f\n", maxValue);
-                System.out.printf("minValue is %.2f\n", minValue);
-                System.out.printf("averageValue is %.2f\n", averageValue);
-                System.out.printf("sumValue is %.2f\n", sumValue);
+                System.out.printf("maxValue is %f\n", maxValue);
+                System.out.printf("minValue is %f\n", minValue);
+                System.out.printf("averageValue is %f\n", averageValue);
+                System.out.printf("sumValue is %f\n", sumValue);
             }
         } else if (Solution.ShortStatistics || Solution.FullStatistics)
             System.out.println("There are no statistics on Floats because number of elements is zero");
