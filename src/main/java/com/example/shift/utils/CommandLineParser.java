@@ -10,11 +10,11 @@ public class CommandLineParser {
 
     private final CommandLine commandLine;
 
-    public CommandLineParser(final String[] commandLineArguments) throws Exception {
+    public CommandLineParser(final String[] commandLineArguments) throws CustomException {
 
         commandLine = parseCommandLine(commandLineArguments);
         if (commandLine == null) {
-            throw new Exception("Failed to process input parameters.");
+            throw new CustomException("Failed to process input parameters.");
         } else {
             validateCommandLine(commandLine);
         }
@@ -37,13 +37,13 @@ public class CommandLineParser {
         return commandLine;
     }
 
-    private void validateCommandLine(CommandLine commandLine) throws Exception {
+    private void validateCommandLine(CommandLine commandLine) throws CustomException {
 
         if (commandLine.getFilesNames().size() < 1) {
-            throw new Exception("At least one input filename must be entered, Fix it please...");
+            throw new CustomException("At least one input filename must be entered, Fix it please...");
         }
         if (commandLine.getShortStatistics() && commandLine.getFullStatistics()) {
-            throw new Exception("You have entered both mutually exclusive parameters -s -f, Fix it please...");
+            throw new CustomException("You have entered both mutually exclusive parameters -s -f, Fix it please...");
         }
         Solution.PathOutputFiles = commandLine.getPathOutputFiles();
         Solution.PrefixOutputFiles = commandLine.getPrefixOutputFiles();
