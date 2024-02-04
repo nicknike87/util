@@ -21,7 +21,7 @@ public class Utils {
     }
 
     public static boolean isFloat(String line) {
-        String regex = "^[-+]?[0-9]*[.,]?[0-9]+(?:[eE][-+]?[0-9]+)?$";
+        String regex = "^[-+]?[0-9]*[.]?[0-9]+(?:[eE][-+]?[0-9]+)?$";
         return Pattern.matches(regex, line);
     }
 
